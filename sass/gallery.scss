@@ -1,0 +1,69 @@
+/**
+ * Gallery
+ * 
+ * The Gallery plugin for Wolf CMS is a third-party plugin for managing photo albums and displaying them on your website.
+ * 
+ * @package     Plugins
+ * @subpackage  gallery
+ * 
+ * @author      Nic Wortel <nic.wortel@nth-root.nl>
+ * @copyright   Nic Wortel, 2013
+ * @version     0.1.0
+ */
+
+@import "modules/_wolfcms-plugin.scss";
+
+body#body_plugin_gallery div#content {
+
+    @include plugin();
+
+    th,
+    td {
+        &.number {
+            width: 50px;
+            text-align: right;
+
+            &.long {
+                width: 70px;
+            }
+        }
+
+        &.price {
+            width: 80px;
+            text-align: right;    
+        }
+
+        &.delete,
+        &.set_required {
+            width: 60px;
+            vertical-align: middle;
+            text-align: center;    
+        }
+
+        &.thumbnail {
+            width: 60px;
+        }
+    }
+
+    td .not-applicable {
+        color: #bbb;
+    }
+
+    input.number {
+        text-align: right;
+    }
+
+    textarea {
+        width: 100% !important;
+        min-height: 200px;
+    }
+
+    span.actions {
+        visibility: hidden;
+    }
+
+    tr:hover span.actions {
+        visibility: visible;
+    }
+
+}
